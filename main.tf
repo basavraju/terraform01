@@ -5,7 +5,7 @@ provider "aws" {
 
 resource "aws_key_pair" "my_key_pair" {
   key_name   = "mykeypair"            
-  public_key = file("/root/examples/id_rsa.pub") 
+  public_key = file("/var/lib/jenkins/id_rsa.pub") 
 }
 
 resource "aws_instance" "example_server" {
